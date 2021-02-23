@@ -144,21 +144,11 @@ h2{
 	color: #5F65AF;
 }
 
-/* Styles pour les écrans type tablette */
+/* Styles pour les écrans type tablette/desktop */
 
-@media screen and (min-width: 780px) and (max-width: 979px) {
+@media screen and (min-width: 780px) {
 
-	/*#nom_chrono{
-		font-size: 15px;*/
+	#topchrono {
+		flex-direction: column-reverse;
 	}
-}
-
-/* Styles pour les écrans type ordinateur */
-
-@media screen and (min-width: 980px) {
-/*
-	#topchrono{
-		flex-direction: row;
-	}
-*/
 }
