@@ -1,5 +1,4 @@
 /* SDesign général pour mobile */
-
 body{
 	background: linear-gradient(#1F618D, #FFFFFF);
 	margin: 0;
@@ -9,146 +8,160 @@ body{
 	font-family: arial;
 }
 
-
 	/*Header*/
-
 #nom_chrono{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 	height: auto;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	font-size: 45px;
+	margin: 5px 0;
+	font-size: 18px;
 }
-
-
 h2{
-	margin : 0px 0px;
+	margin : 0;
 }
-
 #titre{
 	color : #232323;
 }
-
 #sous_titre{
 	color : #615e5e;
 }
 
-
-	/* Début Section*/
-
+/*Section topchrono*/
 #topchrono{
-	flex: 1;
-	margin-top: 50px;
-	margin-bottom: 50px;
 	display: flex;
 	flex-direction: column;
+	margin: 15px 0;
 }
-
-#horloge{
-	display: flex;
-	justify-content: center;
+.horloge1{
+	margin: 0 auto;
+	width: 150px;
+	height: auto;
 }
-
-
-	/*Début Coutdown*/
-
 #countdown{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
-	margin-top: 20px;
-	font-size: 50px;
+	font-size: 20px;
 }
-
 #count_day, #count_hour, #count_min{
 	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-direction: column;
-	width: 350px;
-	height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	width: 130px;
+	height: 90px;
+	margin: 8px 0;
 }
-
 #count_day{
 	background: linear-gradient(#33005B, #D4D4D4);
 }
-
 #count_hour{
 	background: linear-gradient(#02A7CC, #D4D4D4);
 }
-
 #count_min{
 	background: linear-gradient(#00B483, #D4D4D4);
 }
-
 #count_sec{
 	display: none;
 }
-
 #countdown_day, #countdown_hour, #countdown_min{
-	font-size: 70px;
+	font-size: 40px;
 	font-weight: bold;
 }
-
-
-	/*Fin Countdown*/
-
 #bouton{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-
-	/*Fin Section*/
+.bouton{
+	width: 80px;
+}
+.horloge2{
+	visibility: hidden;
+	display: none;
+}
 
 /*Footer*/
-
 #lien_anne{
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	margin-left: 20px;
+	flex-direction: row;
+	margin-left: 10px;
 }
-
-#lien_git, #nom, #logo_git {
-	display: flex;
-	justify-content: center;
-  	align-items: center;
-}
-
-#lien_git, #nom{
+#git, #nom{
 	width: 400px;
 	height: 20px;
 }
-
-#lien_git{	
-	font-size: 30px;
+#git{	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 20px;
 	font-weight: bold
 }
-
-#logo_git {
-	width: 400px;
-	height: 100px;
+.logo_git {
+	width: 50px;
+	margin-top: 10px;
 }
-
 #nom{
-	font-size: 60px;
+	font-size: 25px;
 	font-weight: bold;
 	color: #5F65AF;
+	margin-left: 20px;
 }
 
 /* Styles pour les écrans type tablette/desktop */
-
 @media screen and (min-width: 780px) {
+	/*Header*/
+	#nom_chrono{
+		margin: 10px 0;
+		font-size: 20px;
+	}
 
-	#topchrono {
-		flex-direction: column-reverse;
+	/*Section topchrono*/
+	#topchrono{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin: 20px 0;
+	}	
+	.horloge1{
+		visibility: hidden;
+		display: none;
+	}
+	#countdown{
+		margin: 5px 0;
+		font-size: 30px;
+	}
+	#count_day, #count_hour, #count_min{
+		width: 185px;
+		height: 130px;
+	}
+	.horloge2{
+		width: 200px;
+		visibility: visible;
+		display: flex;
+	}
+	#bouton{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+	}
+	.bouton{
+		width: 100px;
+		height: 100px;
+	}
+	
+	/*Footer*/
+	#lien_anne{
+		justify-content: space-between;
+	}
+	#git{
+		font-size: 20px;
+	}
+	.logo_git{
+		width: 70px;
+	}
+	#nom{
+		font-size: 30px;
 	}
 }
